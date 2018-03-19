@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
+import * as helper from '../helper.js'
 
 class App extends Component {
+
+  componentDidMount() {
+    helper.cleanData()
+  }
   render() {
     return (
       <div className="App">
