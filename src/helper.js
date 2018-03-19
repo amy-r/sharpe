@@ -22,28 +22,34 @@ export const fetchApi = async (url) => {
   }
 }
 
-export const getData = async () => {
-  const fetched = await fetchApi('https://api.nomics.com/v0/sparkline')
- 
-  const allCloses = fetched.year.map( year => year.closes )
-  const currencyNames = fetched.year.map( year => year.currency )
+export const createReturns = (closes) => {
 
-  const allRtrns = allCloses.map( (arrofCloses, i) => {
+  const allRtrns = closes.map( (arrofCloses, i) => {
 
     const rtrns = arrofCloses.reduce( (rtrnsArr, closeArr, i) => {
       const ret = ((arrofCloses[i+1] - arrofCloses[i])/arrofCloses[i])
       return [...rtrnsArr, ret]  
-    }, [])
+      }, [])
 
-    return rtrns.filter(Boolean)
+      return rtrns.filter(Boolean)
   });
 
+  return allRtrns
+}
+
+export const getData = async () => {
+  const fetched = await fetchApi('https://api.nomics.com/v0/sparkline')
+ 
+  const allCloses = fetched.year.map( year => year.closes )
+  const allRtrns = createReturns(allCloses);
   const allSharpes = allRtrns.map( (rtn) => {
     return sharpeRatio(rtn)
   });
   
+  const currencyNames = fetched.year.map( year => year.currency )
   const currencyRtrns = {};
+
   currencyNames.forEach( (name, i) => currencyRtrns[name] = allSharpes[i]);
-  console.log(currencyRtrns)
+  return currencyRtrns
 }
 
