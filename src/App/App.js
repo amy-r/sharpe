@@ -6,7 +6,7 @@ import * as helper from '../helper.js'
 class App extends Component {
 
   componentDidMount() {
-    helper.cleanData()
+    helper.getData()
   }
   render() {
     return (
