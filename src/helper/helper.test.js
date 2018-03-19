@@ -1,5 +1,5 @@
-import { sharpeRatio, fetchApi } from './helper.js';
-import {mockDay, mockWeek,mockMonth, mockYear} from './mockData.js'
+import { sharpeRatio, fetchApi, createReturns, getData } from './helper.js';
+import { mockDay, mockWeek,mockMonth, mockYear, mockCloses, mockReturns } from './mockData.js'
 var math = require('mathjs');
 
 describe('helper', () => {
@@ -12,7 +12,7 @@ describe('helper', () => {
     it('should take in an array of numbers', () => {
       const sharpeRatio = jest.fn();
       sharpeRatio(mockArr);
-      expect(sharpeRatio).toHaveBeenCalledWith(mockArr);
+      expect.arrayContaining(mockArr);
     })
 
     it('should return the sharpe ratio', () => {
@@ -20,7 +20,7 @@ describe('helper', () => {
     })
   })
 
- describe('fetchApi', () => {
+  describe('fetchApi', () => {
     
     let url
 
@@ -67,5 +67,53 @@ describe('helper', () => {
       expect(fetchApi(url)).rejects.toEqual(Error('Could not get data'))
     })
 
+  })
+
+  describe('createReturns', () => {
+
+    it('should take in an array of arrays', () => {
+      const createReturns = jest.fn();
+      createReturns(mockCloses);
+      expect.arrayContaining(mockCloses)    
+    })
+
+    it('should return an array of returns', () => {
+      const expectedReturns = [
+        [1, 0.5, 0.3333333333333333, 0.25],
+        [1, 0.5, 0.3333333333333333, 0.25]
+      ]
+      expect(createReturns(mockCloses)).toEqual(expectedReturns)
+    })
+  })
+
+  describe('getData', () => {
+    let mockUrl;
+    let fetchApi
+    beforeAll( () => {
+      window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+          status: 200,
+          json: () => Promise.resolve({ 
+            day: mockDay,
+            week: mockWeek,
+            month: mockMonth,
+            year: mockYear 
+          })
+        })
+      ) 
+      mockUrl = ('https://website.com')
+    })
+
+    it('should call the fetch in fetchApi', () => {
+      fetchApi = jest.fn();
+      getData(mockUrl);
+      expect(fetchApi).toHaveBeenCalled();
+    })
+
+    it('should call createReturns', () => {
+      fetchApi = jest.fn();
+      const createReturns= jest.fn();
+      getData(mockUrl);
+      expect(createReturns).toBeCalled();
+    })
   })
 })

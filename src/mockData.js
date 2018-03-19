@@ -249,3 +249,14 @@ export const mockYear = [
     ]
   }
 ]
+
+export const mockCloses = [
+  [2, 4, 6, 8, 10], 
+  [2, 4, 6, 8, 10]
+]
+
+export const mockReturns = {
+  '1ST' : 0.07111676647481094,
+  '2GIVE' : 0.26594031129562473,
+  '8BT' : 0.22783350944442976
+}

@@ -37,8 +37,8 @@ export const createReturns = (closes) => {
   return allRtrns
 }
 
-export const getData = async () => {
-  const fetched = await fetchApi('https://api.nomics.com/v0/sparkline')
+export const getData = async (url) => {
+  const fetched = await fetchApi(url)
  
   const allCloses = fetched.year.map( year => year.closes )
   const allRtrns = createReturns(allCloses);
@@ -50,6 +50,7 @@ export const getData = async () => {
   const currencyRtrns = {};
 
   currencyNames.forEach( (name, i) => currencyRtrns[name] = allSharpes[i]);
+  console.log(currencyRtrns)
   return currencyRtrns
 }
 
