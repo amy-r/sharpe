@@ -256,7 +256,12 @@ export const mockCloses = [
 ]
 
 export const mockReturns = {
-  '1ST' : 0.07111676647481094,
-  '2GIVE' : 0.26594031129562473,
-  '8BT' : 0.22783350944442976
+  "1ST": 0.071476344869741,
+}
+
+export const mockFetched = {
+  day: mockDay,
+  week: mockWeek,
+  month: mockMonth,
+  year: mockYear
 }

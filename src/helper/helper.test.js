@@ -1,5 +1,5 @@
 import { sharpeRatio, fetchApi, createReturns, getData } from './helper.js';
-import { mockDay, mockWeek,mockMonth, mockYear, mockCloses, mockReturns } from './mockData.js'
+import { mockDay, mockWeek,mockMonth, mockYear, mockCloses, mockReturns, mockFetched } from './mockData.js'
 var math = require('mathjs');
 
 describe('helper', () => {
@@ -72,7 +72,6 @@ describe('helper', () => {
   describe('createReturns', () => {
 
     it('should take in an array of arrays', () => {
-      const createReturns = jest.fn();
       createReturns(mockCloses);
       expect.arrayContaining(mockCloses)    
     })
@@ -87,33 +86,9 @@ describe('helper', () => {
   })
 
   describe('getData', () => {
-    let mockUrl;
-    let fetchApi
-    beforeAll( () => {
-      window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-          status: 200,
-          json: () => Promise.resolve({ 
-            day: mockDay,
-            week: mockWeek,
-            month: mockMonth,
-            year: mockYear 
-          })
-        })
-      ) 
-      mockUrl = ('https://website.com')
-    })
-
-    it('should call the fetch in fetchApi', () => {
-      fetchApi = jest.fn();
-      getData(mockUrl);
-      expect(fetchApi).toHaveBeenCalled();
-    })
-
-    it('should call createReturns', () => {
-      fetchApi = jest.fn();
-      const createReturns= jest.fn();
-      getData(mockUrl);
-      expect(createReturns).toBeCalled();
+    it('should take in fetchedData and return an object with currency returns', () => {
+      expect(getData(mockFetched)).toEqual(mockReturns)
     })
   })
+
 })

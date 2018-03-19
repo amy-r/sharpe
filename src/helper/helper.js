@@ -37,8 +37,7 @@ export const createReturns = (closes) => {
   return allRtrns
 }
 
-export const getData = async (url) => {
-  const fetched = await fetchApi(url)
+export const getData = (fetched) => {
  
   const allCloses = fetched.year.map( year => year.closes )
   const allRtrns = createReturns(allCloses);
@@ -50,7 +49,7 @@ export const getData = async (url) => {
   const currencyRtrns = {};
 
   currencyNames.forEach( (name, i) => currencyRtrns[name] = allSharpes[i]);
-  console.log(currencyRtrns)
+  // console.log(currencyRtrns)
   return currencyRtrns
 }
 
