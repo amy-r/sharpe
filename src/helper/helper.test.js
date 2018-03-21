@@ -89,5 +89,4 @@ describe('helper', () => {
       expect(getData(mockFetched)).toEqual(mockReturns)
     })
   })
-
 })

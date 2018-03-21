@@ -49,7 +49,6 @@ export const getData = (fetched) => {
   const currencyRtrns = {};
 
   currencyNames.forEach( (name, i) => currencyRtrns[name] = allSharpes[i]);
-  // console.log(currencyRtrns)
   return currencyRtrns
 }
 
