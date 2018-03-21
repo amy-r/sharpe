@@ -1,0 +1,651 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table renders receives correct props and renders correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Table
+    currencyReturns={
+        Object {
+            "1ST": 0.07782962305006015,
+            "2GIVE": 0.2838848343236152,
+            "8BT": 0.22783350944442976,
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1>
+          Sharpe Ratios and Currencies 
+</h1>,
+        <table>
+          <tr>
+                    <td>
+                               
+                              1ST
+                               
+                    </td>
+                      
+                    <td>
+                               
+                              0.07782962305006015
+                               
+                    </td>
+          </tr>
+          <tr>
+                    <td>
+                               
+                              2GIVE
+                               
+                    </td>
+                      
+                    <td>
+                               
+                              0.2838848343236152
+                               
+                    </td>
+          </tr>
+          <tr>
+                    <td>
+                               
+                              8BT
+                               
+                    </td>
+                      
+                    <td>
+                               
+                              0.22783350944442976
+                               
+                    </td>
+          </tr>
+</table>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Sharpe Ratios and Currencies ",
+        },
+        "ref": null,
+        "rendered": "Sharpe Ratios and Currencies ",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <tr>
+              <td>
+                             
+                            1ST
+                             
+              </td>
+                
+              <td>
+                             
+                            0.07782962305006015
+                             
+              </td>
+</tr>,
+            <tr>
+              <td>
+                             
+                            2GIVE
+                             
+              </td>
+                
+              <td>
+                             
+                            0.2838848343236152
+                             
+              </td>
+</tr>,
+            <tr>
+              <td>
+                             
+                            8BT
+                             
+              </td>
+                
+              <td>
+                             
+                            0.22783350944442976
+                             
+              </td>
+</tr>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "1ST",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <td>
+                   
+                  1ST
+                   
+</td>,
+                "  ",
+                <td>
+                   
+                  0.07782962305006015
+                   
+</td>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    "1ST",
+                    " ",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  "1ST",
+                  " ",
+                ],
+                "type": "td",
+              },
+              "  ",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    0.07782962305006015,
+                    " ",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  0.07782962305006015,
+                  " ",
+                ],
+                "type": "td",
+              },
+            ],
+            "type": "tr",
+          },
+          Object {
+            "instance": null,
+            "key": "2GIVE",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <td>
+                   
+                  2GIVE
+                   
+</td>,
+                "  ",
+                <td>
+                   
+                  0.2838848343236152
+                   
+</td>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    "2GIVE",
+                    " ",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  "2GIVE",
+                  " ",
+                ],
+                "type": "td",
+              },
+              "  ",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    0.2838848343236152,
+                    " ",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  0.2838848343236152,
+                  " ",
+                ],
+                "type": "td",
+              },
+            ],
+            "type": "tr",
+          },
+          Object {
+            "instance": null,
+            "key": "8BT",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <td>
+                   
+                  8BT
+                   
+</td>,
+                "  ",
+                <td>
+                   
+                  0.22783350944442976
+                   
+</td>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    "8BT",
+                    " ",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  "8BT",
+                  " ",
+                ],
+                "type": "td",
+              },
+              "  ",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    0.22783350944442976,
+                    " ",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  0.22783350944442976,
+                  " ",
+                ],
+                "type": "td",
+              },
+            ],
+            "type": "tr",
+          },
+        ],
+        "type": "table",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+            Sharpe Ratios and Currencies 
+</h1>,
+          <table>
+            <tr>
+                        <td>
+                                     
+                                    1ST
+                                     
+                        </td>
+                          
+                        <td>
+                                     
+                                    0.07782962305006015
+                                     
+                        </td>
+            </tr>
+            <tr>
+                        <td>
+                                     
+                                    2GIVE
+                                     
+                        </td>
+                          
+                        <td>
+                                     
+                                    0.2838848343236152
+                                     
+                        </td>
+            </tr>
+            <tr>
+                        <td>
+                                     
+                                    8BT
+                                     
+                        </td>
+                          
+                        <td>
+                                     
+                                    0.22783350944442976
+                                     
+                        </td>
+            </tr>
+</table>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Sharpe Ratios and Currencies ",
+          },
+          "ref": null,
+          "rendered": "Sharpe Ratios and Currencies ",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <tr>
+                <td>
+                                 
+                                1ST
+                                 
+                </td>
+                  
+                <td>
+                                 
+                                0.07782962305006015
+                                 
+                </td>
+</tr>,
+              <tr>
+                <td>
+                                 
+                                2GIVE
+                                 
+                </td>
+                  
+                <td>
+                                 
+                                0.2838848343236152
+                                 
+                </td>
+</tr>,
+              <tr>
+                <td>
+                                 
+                                8BT
+                                 
+                </td>
+                  
+                <td>
+                                 
+                                0.22783350944442976
+                                 
+                </td>
+</tr>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "1ST",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <td>
+                     
+                    1ST
+                     
+</td>,
+                  "  ",
+                  <td>
+                     
+                    0.07782962305006015
+                     
+</td>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      "1ST",
+                      " ",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    "1ST",
+                    " ",
+                  ],
+                  "type": "td",
+                },
+                "  ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      0.07782962305006015,
+                      " ",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    0.07782962305006015,
+                    " ",
+                  ],
+                  "type": "td",
+                },
+              ],
+              "type": "tr",
+            },
+            Object {
+              "instance": null,
+              "key": "2GIVE",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <td>
+                     
+                    2GIVE
+                     
+</td>,
+                  "  ",
+                  <td>
+                     
+                    0.2838848343236152
+                     
+</td>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      "2GIVE",
+                      " ",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    "2GIVE",
+                    " ",
+                  ],
+                  "type": "td",
+                },
+                "  ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      0.2838848343236152,
+                      " ",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    0.2838848343236152,
+                    " ",
+                  ],
+                  "type": "td",
+                },
+              ],
+              "type": "tr",
+            },
+            Object {
+              "instance": null,
+              "key": "8BT",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <td>
+                     
+                    8BT
+                     
+</td>,
+                  "  ",
+                  <td>
+                     
+                    0.22783350944442976
+                     
+</td>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      "8BT",
+                      " ",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    "8BT",
+                    " ",
+                  ],
+                  "type": "td",
+                },
+                "  ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      0.22783350944442976,
+                      " ",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    0.22783350944442976,
+                    " ",
+                  ],
+                  "type": "td",
+                },
+              ],
+              "type": "tr",
+            },
+          ],
+          "type": "table",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

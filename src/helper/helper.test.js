@@ -66,7 +66,6 @@ describe('helper', () => {
 
       expect(fetchApi(url)).rejects.toEqual(Error('Could not get data'))
     })
-
   })
 
   describe('createReturns', () => {
